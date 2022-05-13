@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="icon" type="image/x-icon" href="smile.png">
+    <link rel="icon" type="image/x-icon" href="image/smile.png">
     <title>Meme slider on css</title>
 </head>
+
 <body>
-    <h1>My first slider on css</h1>
     <div class="container">
-        <div class="slider-wrapper">
-            <div class="slider active">
-                <img src="" alt="">
-                <div class="content">
-                    <h2>text</h2>
+        <h1>My first slider on css</h1>
+        <div class="flex-wrapper">
+            <input checked type="radio" name="respond" id="desktop">
+                <article id="slider">
+                    <input checked type="radio" name="slider" id="swich1">
+                    <input type="radio" name="slider" id="swich2">
+                    <input type="radio" name="slider" id="swich3">
+                    <input type="radio" name="slider" id="swich4">
+                    <input type="radio" name="slider" id="swich5">
+                </article>
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="image">
+                            <article><img src="image/image-1.jpg" alt=""></article>
+                            <article><img src="image/image-2.jpg" alt=""></article>
+                            <article><img src="image/image-3.jpg" alt=""></article>
+                            <article><img src="image/image-4.jpg" alt=""></article>
+                            <article><img src="image/image-5.jpg" alt=""></article>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="slider">
-                <img src="" alt="">
-                <div class="content">
-                    <h2>text</h2>
-                </div>
-            </div>
-            <div class="slider">
-                <img src="" alt="">
-                <div class="content">
-                    <h2>text</h2>
-                </div>
-            </div>
-            <div class="slider">
-                <img src="" alt="">
-                <div class="content">
-                    <h2>text</h2>
-                </div>
-            </div>
-            <div class="slider">
-                <img src="" alt="">
-                <div class="content">
-                    <h2>text</h2>
-                </div>
-            </div>
-            </div>
+            <!-- /.slide-wrapper -->
         </div>
+        <!-- /.flex-wrapper -->
         <div class="dots-wrapper">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -52,6 +45,9 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
+        <!-- /.dots-wrapper -->
     </div>
+    <!-- /.container -->
 </body>
+
 </html>
