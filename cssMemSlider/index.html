@@ -16,13 +16,12 @@
         <h1>My first slider on css</h1>
         <div class="flex-wrapper">
             <input checked type="radio" name="respond" id="desktop">
-                <article id="slider">
-                    <input checked type="radio" name="slider" id="swich1">
-                    <input type="radio" name="slider" id="swich2">
-                    <input type="radio" name="slider" id="swich3">
-                    <input type="radio" name="slider" id="swich4">
-                    <input type="radio" name="slider" id="swich5">
-                </article>
+            <article id="slider">
+                <input checked type="radio" name="slider" id="switch1">
+                <input type="radio" name="slider" id="switch2">
+                <input type="radio" name="slider" id="switch3">
+                <input type="radio" name="slider" id="switch4">
+                <input type="radio" name="slider" id="switch5">
                 <div id="slides">
                     <div id="overflow">
                         <div class="image">
@@ -32,20 +31,28 @@
                             <article><img src="image/image-4.jpg" alt=""></article>
                             <article><img src="image/image-5.jpg" alt=""></article>
                         </div>
+                        <!-- /.image -->
                     </div>
+                    <!-- /.overflow -->
                 </div>
-            </div>
-            <!-- /.slide-wrapper -->
+                <!-- /.slides -->
+                <div id="controls">
+                    <label for="switch1"></label>
+                    <label for="switch2"></label>
+                    <label for="switch3"></label>
+                    <label for="switch4"></label>
+                    <label for="switch5"></label>
+                </div>
+                <div id="active">
+                    <label for="switch1"></label>
+                    <label for="switch2"></label>
+                    <label for="switch3"></label>
+                    <label for="switch4"></label>
+                    <label for="switch5"></label>
+                </div>
+            </article>
         </div>
         <!-- /.flex-wrapper -->
-        <div class="dots-wrapper">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-        <!-- /.dots-wrapper -->
     </div>
     <!-- /.container -->
 </body>

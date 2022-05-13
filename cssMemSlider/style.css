@@ -10,11 +10,3 @@
     display: flex;
     justify-content: center;
 }
-
-.slider {
-    display: none;
-}
-
-.active {
-    display: block;
-}
