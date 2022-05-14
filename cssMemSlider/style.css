@@ -96,7 +96,8 @@ a {
 }
 
 #active label {
-    border-radius: 10px;
+    border: 5px solid #fff;
+    border-radius: 100px;
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -104,13 +105,14 @@ a {
 }
 
 #active {
+    width: 100%;
     margin: 9% -83% 0 0;
-    text-align: center;
+    text-align: end;
 }
 
 #active label:hover {
     background: #76c8ff;
-    border-color: #777 !important;
+    border: 5 px solid #777 !important;
 }
 
 #switch1:checked~#active label:nth-child(1),
@@ -119,7 +121,6 @@ a {
 #switch4:checked~#active label:nth-child(4),
 #switch5:checked~#active label:nth-child(5) {
     background: #18a3dd;
-    border-color: #18a3dd !important;
 }
 
 #slides .image {
