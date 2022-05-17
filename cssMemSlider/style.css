@@ -3,20 +3,19 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: auto;
 }
 
 .title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #slider {
-    position: relative;
     text-align: center;
-    top: 10px;
 }
 
 #slider {
@@ -35,6 +34,10 @@
 #overflow {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 0.2rem;
 }
 
 article img {
@@ -45,13 +48,13 @@ article img {
 .text {
     font-size: 24px;
     text-align: left;
-    padding-top: 20px;
+    padding-top: 1rem;
     width: 80%;
     margin: 0;
 }
 
 #desktop:checked~#slider {
-    max-width: 960px;
+    max-width: 60rem;
 }
 
 label,
@@ -71,26 +74,31 @@ a {
 
 #switch1:checked~#slides .image {
     margin-left: 0;
+    margin-bottom: 3rem;
 }
 
 #switch2:checked~#slides .image {
     margin-left: -100%;
+    margin-bottom: 3rem;
 }
 
 #switch3:checked~#slides .image {
     margin-left: -200%;
+    margin-bottom: 3rem;
 }
 
 #switch4:checked~#slides .image {
     margin-left: -300%;
+    margin-bottom: 3rem;
 }
 
 #switch5:checked~#slides .image {
     margin-left: -400%;
+    margin-bottom: 3rem;
 }
 
 #controls {
-    margin: -25% 0 0 0;
+    margin: -33% 0 0 0;
     width: 100%;
     height: 50px;
 }
@@ -124,7 +132,27 @@ a {
 }
 
 #slides .image {
-    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.5s;
+}
+
+/*#slides .text {
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}*/
+#slides .text {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
 }
 
 #controls label:hover {
@@ -134,3 +162,85 @@ a {
 #controls label {
     transition: opacity 0.2s ease-out;
 }
+
+
+@media screen and (max-width: 768px) {
+
+
+    #active {
+        text-align: center;
+        margin: 5% 0% 0 0;
+    }
+
+    #controls {
+        margin: -33% 0 -3% 0;
+    }
+
+    #slides .text {
+        margin-top: 3rem;
+    }
+
+    .text {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .container {
+        width: 80vh;
+    }
+
+    #overflow {
+        width: 85%;
+        margin-left: 3.2rem;
+    }
+
+    #active {
+        margin: 12% 0 0 0;
+    }
+
+    #controls {
+        margin: -42% 0 -3% 0;
+    }
+
+
+}
+
+@media screen and (max-width: 568px) {
+    #controls {
+        display: flex;
+        width: 27rem;
+        margin: auto;
+        margin-top: -40%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+        #active {
+            margin: 2% 0 0 0;
+        }
+
+        #overflow {
+            width: 75%;
+            margin-left: 4.8rem;
+        }
+
+        #slides {
+            width: 36rem;
+        }
+    }
+
+    @media screen and (max-width: 468px) {
+        .container {
+            width: 55vh;
+        }
+
+        #overflow {
+            width: 62%;
+            margin-left: 8.2rem;
+        }
+
+        #active {
+            margin: 4% 0 0 0;
+        }
+    }
