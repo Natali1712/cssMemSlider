@@ -1,6 +1,6 @@
 .container {
-    width: 100vh;
-    height: 100vh;
+    width: 95%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -165,26 +165,18 @@ a {
 }
 
 @media screen and (max-width: 1088px) {
-    .container {
-        width: 70vh;
-    }
-
     #active {
-        margin: -13% 0 0 0;
+        margin: -11% 0 0 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        width: 60vh;
-    }
-
     #active {
         text-align: center;
     }
 
     #active {
-        margin: -24% 0 0 0;
+        margin: -20% 0 0 0;
     }
 
     #slides .text {
@@ -197,22 +189,14 @@ a {
 }
 
 @media screen and (max-width: 668px) {
-    .container {
-        width: 50vh;
-    }
-
     #active {
-        margin: -28% 0 0 0;
+        margin: -23% 0 0 0;
     }
 }
 
 @media screen and (max-width: 568px) {
-    .container {
-        width: 40vh;
-    }
-
     #active {
-        margin: -42% 0 0 0;
+        margin: -27% 0 0 0;
     }
 
     #slides {
@@ -221,30 +205,22 @@ a {
 }
 
 @media screen and (max-width: 468px) {
-    .container {
-        width: 35vh;
-    }
-
     .title {
         width: 60%;
         text-align: center;
     }
 
     #active {
-        margin-top: -46%;
+        margin: -46% 0 0 0;
     }
 }
 
 @media screen and (max-width: 389px) {
-    .container {
-        width: 30vh;
-    }
-
     .title {
         font-size: 1.7rem;
     }
 
     #active {
-        margin: -65% 0 0 0;
+        margin: -48% 0 0 0;
     }
 }
