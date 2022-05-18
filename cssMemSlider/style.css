@@ -14,6 +14,14 @@
     margin-bottom: 2rem;
 }
 
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+}
+
+
 #slider {
     text-align: center;
 }
@@ -37,7 +45,6 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-left: 0.2rem;
 }
 
 article img {
@@ -54,7 +61,7 @@ article img {
 }
 
 #desktop:checked~#slider {
-    max-width: 60rem;
+    width: 100%;
 }
 
 label,
@@ -114,7 +121,7 @@ a {
 
 #active {
     width: 100%;
-    margin: 9% -83% 0 0;
+    margin: 1% 0 0 0;
     text-align: end;
 }
 
@@ -169,11 +176,10 @@ a {
 
     #active {
         text-align: center;
-        margin: 5% 0% 0 0;
     }
 
     #controls {
-        margin: -33% 0 -3% 0;
+        margin: -34% 0 0 0;
     }
 
     #slides .text {
@@ -192,15 +198,12 @@ a {
 
     #overflow {
         width: 85%;
-        margin-left: 3.2rem;
     }
 
-    #active {
-        margin: 12% 0 0 0;
-    }
+    #active {}
 
     #controls {
-        margin: -42% 0 -3% 0;
+        margin: -49% 0 0 0;
     }
 
 
@@ -208,39 +211,52 @@ a {
 
 @media screen and (max-width: 568px) {
     #controls {
-        display: flex;
-        width: 27rem;
-        margin: auto;
-        margin-top: -40%;
-        justify-content: center;
-        flex-direction: column;
+        margin-top: -50%;
     }
 
-        #active {
-            margin: 2% 0 0 0;
-        }
-
-        #overflow {
-            width: 75%;
-            margin-left: 4.8rem;
-        }
-
-        #slides {
-            width: 36rem;
-        }
+    #active {
+        margin: 2% 0 0 0;
     }
 
-    @media screen and (max-width: 468px) {
-        .container {
-            width: 55vh;
-        }
-
-        #overflow {
-            width: 62%;
-            margin-left: 8.2rem;
-        }
-
-        #active {
-            margin: 4% 0 0 0;
-        }
+    #overflow {
+        width: 75%;
+        margin-left: 4.8rem;
     }
+
+    #slides {
+        width: 36rem;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .container {
+        width: 65vh;
+    }
+
+    .title {
+        width: 60%;
+        text-align: center;
+    }
+
+    #overflow {}
+
+    #active {
+        margin: 0;
+    }
+
+    #controls {
+        margin-top: -60%;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .container {
+        width: 55vh;
+    }
+        .title {
+            font-size: 1.7rem;
+    }
+        #controls {
+            margin: -80% 0 0 0;
+        }
+}
