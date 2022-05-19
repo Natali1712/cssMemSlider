@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 40rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "title title"
+        "overflow-image overflow-image"
+        "overflow-text controls";
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.title {
+    margin: 2rem;
+    text-align: center;
+    grid-area: title;
+}
+
+.overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#overflow-image {
+    grid-area: overflow-image;
+    margin-bottom: 1.5rem;
+}
+
+#overflow-text {
+    grid-area: overflow-text;
+}
+
+input {
+    display: none;
+}
+
+#controls {
+    width: 100%;
+    display: flex;
+    justify-self: end;
+    
+    grid-area: controls;
+}
+
+
+#switch1:checked~.overflow .slides {
+    margin-left: 0;
+}
+
+#switch2:checked~.overflow .slides {
+    margin-left: -100%;
+}
+
+#switch3:checked~.overflow .slides {
+    margin-left: -200%;
+}
+
+#switch4:checked~.overflow .slides {
+    margin-left: -300%;
+}
+
+#switch5:checked~.overflow .slides {
+    margin-left: -400%;
+}
+
+.slides {
+    width: 500%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 20%);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.5s;
+}
+
+.slider {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    font-size: 20px;
+    width: 90%;
+}
+
+.wrapper-btn{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.controls-btn {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1rem;
+    background: #bbb;
+}
+
+.wrapper-btn:hover {
+    opacity: 0.5;
+}
+
+#switch1:checked~#controls label:nth-child(1) .controls-btn,
+#switch2:checked~#controls label:nth-child(2) .controls-btn,
+#switch3:checked~#controls label:nth-child(3) .controls-btn,
+#switch4:checked~#controls label:nth-child(4) .controls-btn,
+#switch5:checked~#controls label:nth-child(5) .controls-btn {
+    background: #18a3dd;
+}
+
+
+#overflow-text .text {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "overflow-image"
+            "controls"
+            "overflow-text";
+        padding: 0 2rem;
+    }
+
+    #controls {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    .wrapper-btn{
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        width: 100%;
+        font-size: 90%;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+}
