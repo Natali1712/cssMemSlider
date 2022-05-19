@@ -45,7 +45,7 @@ input {
     width: 100%;
     display: flex;
     justify-self: end;
-    justify-content: space-between;
+    
     grid-area: controls;
 }
 
@@ -93,26 +93,30 @@ img {
     width: 90%;
 }
 
-label {
-    border: 5px solid #fff;
-    border-radius: 100px;
-    width: 20px;
-    height: 20px;
-    background: #bbb;
+.wrapper-btn{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
     cursor: pointer;
 }
 
-label:hover {
-    background: #76c8ff;
-    border: 5px solid #fff !important;
-    opacity: 0.6;
+.controls-btn {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1rem;
+    background: #bbb;
 }
 
-#switch1:checked~#controls label:nth-child(1),
-#switch2:checked~#controls label:nth-child(2),
-#switch3:checked~#controls label:nth-child(3),
-#switch4:checked~#controls label:nth-child(4),
-#switch5:checked~#controls label:nth-child(5) {
+.wrapper-btn:hover {
+    opacity: 0.5;
+}
+
+#switch1:checked~#controls label:nth-child(1) .controls-btn,
+#switch2:checked~#controls label:nth-child(2) .controls-btn,
+#switch3:checked~#controls label:nth-child(3) .controls-btn,
+#switch4:checked~#controls label:nth-child(4) .controls-btn,
+#switch5:checked~#controls label:nth-child(5) .controls-btn {
     background: #18a3dd;
 }
 
@@ -147,11 +151,16 @@ label:hover {
         justify-content: center;
         margin-bottom: 1.5rem;
     }
+    .wrapper-btn{
+        justify-content: center;
+        align-items: center;
+    }
     .text {
         width: 100%;
         font-size: 90%;
     }
-    .title{
+
+    .title {
         font-size: 1.8em;
     }
 }
