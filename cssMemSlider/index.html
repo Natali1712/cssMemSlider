@@ -6,72 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
     <link rel="icon" type="image/x-icon" href="image/smile.png">
     <title>Meme slider on css</title>
 </head>
 
 <body>
     <div class="container">
+        <input checked type="radio" name="slider" id="switch1">
+        <input type="radio" name="slider" id="switch2">
+        <input type="radio" name="slider" id="switch3">
+        <input type="radio" name="slider" id="switch4">
+        <input type="radio" name="slider" id="switch5">
+
         <h1 class="title">My first meme slider on css</h1>
-        <div class="flex-wrapper">
-            <input checked type="radio" name="respond" id="desktop">
-            <article id="slider">
-                <input checked type="radio" name="slider" id="switch1">
-                <input type="radio" name="slider" id="switch2">
-                <input type="radio" name="slider" id="switch3">
-                <input type="radio" name="slider" id="switch4">
-                <input type="radio" name="slider" id="switch5">
-
-                <div id="slides">
-                    <div id="overflow">
-                        <div class="image">
-                            <article>
-                                <img src="image/image-1.jpg" alt="">
-                                <p class="text">Как я вижу свою работу без четкого ТЗ</p>
-                            </article>
-                            <article>
-                                <img src="image/image-2.jpg" alt="">
-                                <p class="text">Хмм, код не работает … Интересно, что будет, если ничего не менять и
-                                    запустить его снова</p>
-                            </article>
-                            <article>
-                                <img src="image/image-3.jpg" alt="">
-                                <p class="text">Я программист, я не хочу ничего решать. Я хочу переложить веб</p>
-                            </article>
-                            <article>
-                                <img src="image/image-4.jpg" alt="">
-                                <p class="text">IT глазами клиентов</p>
-                            </article>
-                            <article>
-                                <img src="image/image-5.jpg" alt="">
-                                <p class="text">А работы нету для меня?</p>
-                            </article>
-                        </div>
-                        <!-- /.image -->
-                    </div>
-                    <!-- /.overflow -->
+        <div class="overflow" id="overflow-image">
+            <div class="slides">
+                <div class="slider">
+                    <img src="image/image-1.jpg" alt="mem">
                 </div>
-                <!-- /.slides -->
-                <div id="controls">
-                    <label for="switch1"></label>
-                    <label for="switch2"></label>
-                    <label for="switch3"></label>
-                    <label for="switch4"></label>
-                    <label for="switch5"></label>
+                <div class="slider">
+                    <img src="image/image-2.jpg" alt="mem">
                 </div>
-                <div id="active">
-                    <label for="switch1"></label>
-                    <label for="switch2"></label>
-                    <label for="switch3"></label>
-                    <label for="switch4"></label>
-                    <label for="switch5"></label>
+                <div class="slider">
+                    <img src="image/image-3.jpg" alt="mem">
                 </div>
-            </article>
+                <div class="slider">
+                    <img src="image/image-4.jpg" alt="mem">
+                </div>
+                <div class="slider">
+                    <img src="image/image-5.jpg" alt="mem">
+                </div>
+            </div>
+            <!-- /.slides-mems -->
         </div>
-        <!-- /.flex-wrapper -->
+        <!-- /.overflow -->
+        <div class="overflow" id="overflow-text">
+            <div class="slides">
+                <div class="slider">
+                    <p class="text">Как я вижу свою работу без четкого ТЗ</p>
+                </div>
+                <div class="slider">
+                    <p class="text">Хмм, код не работает … Интересно, что будет, если ничего не менять и запустить его снова</p>
+                </div>
+                <div class="slider">
+                    <p class="text">Я программист, я не хочу ничего решать. Я хочу переложить веб</p>
+                </div>
+                <div class="slider">
+                    <p class="text">IT глазами клиентов</p>
+                </div>
+                <div class="slider">
+                    <p class="text">А работы нету для меня?</p>
+                </div>
+            </div>
+            <!-- /.slides-mems -->
+        </div>
+        <!-- /.overflow -->
+        <div id="controls">
+            <label for="switch1"></label>
+            <label for="switch2"></label>
+            <label for="switch3"></label>
+            <label for="switch4"></label>
+            <label for="switch5"></label>
+        </div>
+        <!-- /.controls -->
     </div>
-
 </body>
 
 </html>
